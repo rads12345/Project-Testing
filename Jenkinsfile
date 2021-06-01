@@ -63,6 +63,9 @@ properties([
         ]
     ])
 ])
+
+import groovy.json.JsonSlurper
+
 pipeline {
   environment {
          vari = ""
