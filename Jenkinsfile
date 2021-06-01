@@ -10,12 +10,12 @@ properties([
                 $class: 'GroovyScript', 
                 fallbackScript: [
                     classpath: [], sandbox: true, script: 'return["Error"]'
-                ], 
-                script: [
+                ], choices: ["","HIT1", "HIT2","SIT2","SIT1","UAT2","DT"]
+             /**   script: [
                     classpath: [], 
                     sandbox: true, 
                     script: 'return["","HIT1", "HIT2","SIT2","SIT1","UAT2","DT"]'
-                ]
+                ]**/
             ]
         ]
 ])
