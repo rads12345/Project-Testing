@@ -1,6 +1,6 @@
 properties([
    parameters([
-        [$class: 'DynamicReferenceParameter', 
+        [$class: 'hudson.model.ParameterDefinition', 
             choiceType: 'PT_SINGLE_SELECT',
             description: 'Select the environment to which deployment is done.', 
             filterLength: 1, 
@@ -27,6 +27,7 @@ pipeline {
         stage('Build') {
             steps {
                echo 'Stage 1 done'
+               echo "Env was: ${params.ENVIRONMENT}"
             }
         }
         stage('Test') {
