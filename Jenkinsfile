@@ -27,12 +27,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Stage 1 done'
+               echo 'Stage ${Number} done'
             }
         }
         stage('Test') {
             steps {
-                echo 'Stage 2 done;'
+                echo 'Stage ${Number} done;'
             }
         }    
     }
