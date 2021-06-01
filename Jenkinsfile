@@ -19,8 +19,9 @@ properties([
                     script: 'return["","HIT1", "HIT2","SIT2","SIT1","UAT2","DT"]'
                 ]
             ]
-        ],
-]       
+        ]
+])
+])   
 pipeline {
     agent any
 
