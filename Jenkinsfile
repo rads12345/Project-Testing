@@ -1,6 +1,6 @@
 properties([
    parameters([
-        [$class: 'ChoiceParameter', 
+        [$class: 'DynamicReferenceParameter', 
             choiceType: 'PT_SINGLE_SELECT',
             description: 'Select the environment to which deployment is done.', 
             filterLength: 1, 
@@ -9,9 +9,7 @@ properties([
             script: [
                 $class: 'GroovyScript', 
                 fallbackScript: [
-                    classpath: [], 
-                    sandbox: true, 
-                    script: 'return["Error"]'
+                    classpath: [], sandbox: true, script: 'return["Error"]'
                 ], 
                 script: [
                     classpath: [], 
